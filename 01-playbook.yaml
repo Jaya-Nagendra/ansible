@@ -1,6 +1,6 @@
 #Playbook
 - name: ping the node
-  hosts: 18.234.36.143
+  hosts: node
 
   #this is list of tasks
   tasks:
