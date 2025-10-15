@@ -1,5 +1,6 @@
 - name: Install and Run nginx # name is not mandataroy its an best practice.
   hosts: node
+  become: yes # This will give sudo access
   tasks:
     - name: Install nginx
       ansible.builtin.yum:
