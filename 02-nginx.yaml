@@ -1,0 +1,11 @@
+- name: Install and Run nginx # name is not mandataroy its an best practice.
+  hosts: node
+  tasks:
+    - name: Install nginx
+      ansible.builtin.yum:
+        name: nginx
+        state: installed
+    - name: Start nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
