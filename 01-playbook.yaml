@@ -1,0 +1,8 @@
+#Playbook
+- name: ping the node
+  hosts: 18.234.36.143
+
+  #this is list of tasks
+  tasks:
+    - name: ping the server
+      ansible.builtin.ping:
