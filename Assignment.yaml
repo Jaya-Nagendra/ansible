@@ -4,6 +4,12 @@
     - name: USERNAME
       prompt: "Please enter username"
       private: false
+    
+    - name: DIR_NAME
+      prompt: "Please enter Directory name"
+      private: false  
+
+      PATH: "/temp"
 
   tasks:
   - name: check the user exist or not
@@ -22,4 +28,17 @@
     ansible.builtin.user:
       name: "{{USERNAME}}"
 
-    when: out.rc !=0        
+    when: out.rc !=0  
+
+############################################
+
+  - name: check the directory exist or not
+    ansible.builtin.stat: 
+    path: "{{PATH}}"
+    register: dir_to_check
+    ignore_errors: true
+
+  - name: print the output
+    ansible.builtin.debug:
+      msg: "The directory was: {{dir_to_check}}"  
+
