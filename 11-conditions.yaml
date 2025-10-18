@@ -19,6 +19,7 @@
       msg: "Exit status: {{output.rc}}"    
 
   - name: create user roboshop
+    become: yes
     ansible.builtin.user:
       name: roboshop
 
