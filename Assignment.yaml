@@ -22,4 +22,4 @@
     ansible.builtin.user:
       name: USERNAME
 
-    when: output.rc !=0        
+    when: out.rc !=0        
