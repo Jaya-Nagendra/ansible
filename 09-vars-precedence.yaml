@@ -3,8 +3,8 @@
   vars:
     NAME: Nagendra
 
-  # vars_files:
-  #   - variables.yaml
+  vars_files:
+    - variables.yaml
 
   vars_prompt:
     - name: NAME
@@ -13,10 +13,16 @@
 
   tasks:
     - name: Variables at task level
-      # vars:
-      #   NAME: Jaya Nagendra
+      vars:
+        NAME: Jaya Nagendra
       ansible.builtin.debug:
         msg: "My name is: {{NAME}}"
+
+
 # The 1st reffernce is command line
 # Next was task level variable.
 # Next was file level refference
+# Next was prompt level
+# Next play level
+# inventory
+# Roles
