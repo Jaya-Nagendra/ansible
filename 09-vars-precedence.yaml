@@ -3,8 +3,8 @@
   vars:
     NAME: Nagendra
 
-  vars_files:
-    - variables.yaml
+  # vars_files:
+  #   - variables.yaml
 
   vars_prompt:
     - name: NAME
@@ -19,4 +19,4 @@
         msg: "My name is: {{NAME}}"
 # The 1st reffernce is command line
 # Next was task level variable.
-
+# Next was file level refference
