@@ -13,4 +13,13 @@
 
   - name:  print the command output
     ansible.builtin.debug:
-      msg: "output is: {{out}}"  
+      msg: 
+        - "output is: {{out}}"  
+        - "Exit code is: {{out.rc}}"  
+
+  - name: create new user
+    become: yes
+    ansible.builtin.user:
+      name: USERNAME
+
+    when: output.rc !=0        
