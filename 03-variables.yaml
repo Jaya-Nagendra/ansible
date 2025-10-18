@@ -1,5 +1,6 @@
 - name: Variables
-  hosts: node
+  # hosts: node
+  hosts: localhost
   vars:
     COURSE: Devops
     DURATION: 4Months
