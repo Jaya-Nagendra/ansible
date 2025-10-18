@@ -1,5 +1,7 @@
 - name: variables from inventory
-  hosts: node
+  hosts: localhost
+  vars:
+    - inventory
   tasks:
     - name: print localhost username
       ansible.builtin.debug:
