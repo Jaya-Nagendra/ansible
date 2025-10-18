@@ -15,6 +15,6 @@
       AWS: 2
       Dccker: 3  
   tasks:  
-  - name: print Variables
-    ansible.builtin.debug:
-      - msg: "Age is: {{AGE}} & Name is: {{NAME}} & Learning message: {{isDevops}} & Printing list: {{Skills}} & Printing map: {{EXPERIENCE}}"
+    - name: print Variables
+      ansible.builtin.debug:
+        - msg: "Age is: {{AGE}} & Name is: {{NAME}} & Learning message: {{isDevops}} & Printing list: {{Skills}} & Printing map: {{EXPERIENCE}}"
