@@ -13,7 +13,10 @@
 
   tasks:
     - name: Variables at task level
-      vars:
-        NAME: Jaya Nagendra
+      # vars:
+      #   NAME: Jaya Nagendra
       ansible.builtin.debug:
         msg: "My name is: {{NAME}}"
+# The 1st reffernce is command line
+# Next was task level variable.
+
