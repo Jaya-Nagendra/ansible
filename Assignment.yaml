@@ -9,7 +9,8 @@
       prompt: "Please enter Directory name"
       private: false  
 
-      PATH: "/temp"
+  vars:
+    PATH: "/temp"    
 
   tasks:
   - name: check the user exist or not
