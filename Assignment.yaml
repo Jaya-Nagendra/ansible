@@ -1,0 +1,16 @@
+- name: Create user if not exists from dynamic input
+  hosts: localhost
+  vars_prompt:
+    - name: USERNAME
+      prompt: "Please enter username"
+      private: false
+
+  tasks:
+  - name: check the user exist or not
+    ansible.become.command: id.{{USERNAME}}
+    register: out
+    ignore_errors: true
+
+  - name:  print the command output
+    ansible.builtin.debug:
+      msg: "output is: {{out}}"  
