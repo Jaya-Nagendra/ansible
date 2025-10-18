@@ -1,5 +1,5 @@
 - name: simple condition
-  host: localhost
+  hosts: localhost
   vars:
     NAME: DevOps
   tasks:
