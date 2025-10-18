@@ -1,2 +1,6 @@
 [node]
-18.234.36.143
+localhost
+
+[node:vars]
+NODE_USERNAME=mongoadmin
+NODE_DB=categories
