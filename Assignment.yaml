@@ -20,6 +20,6 @@
   - name: create new user
     become: yes
     ansible.builtin.user:
-      name: USERNAME
+      name: "{{USERNAME}}"
 
     when: out.rc !=0        
