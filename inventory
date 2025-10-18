@@ -2,5 +2,5 @@
 172.31.19.128
 
 [node:vars]
-NODE_USERNAME=mongoadmin
+NODE_USERNAME=nodeadmin
 NODE_DB=categories
