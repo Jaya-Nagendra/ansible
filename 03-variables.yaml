@@ -11,4 +11,4 @@
 
     - name: Print with Variables
       ansible.builtin.debug:
-        msg: "Hello I am learning {{COURSE}}, Duration {{DURATION}}"
+        msg: "Hello I am learning {{COURSE}}, Duration {{DURATION}}."
