@@ -1,6 +1,6 @@
 - name: variables from inventory
   hosts: localhost
-  vars:
+  vars_files:
     - inventory
   tasks:
     - name: print localhost username
