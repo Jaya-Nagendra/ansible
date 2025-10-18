@@ -1,6 +1,6 @@
 - name: Testing Variable precedence
   hosts: node
-  var:
+  vars:
     NAME: Nagendra
 
   vars_files:
