@@ -4,4 +4,4 @@
   tasks:
     - name: print localhost username
       ansible.builtin.debug:
-        msg: "username is: {{MONGO_USERNAME}}"
+        msg: "username is: {{NODE_USERNAME}}"
