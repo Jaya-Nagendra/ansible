@@ -1,6 +1,5 @@
 - name: ansible variable data types
   hosts: localhost
-  
 
   vars:
     AGE: 30
@@ -24,3 +23,4 @@
           - "Learning message: {{ isDevops }}"
           - "Printing list: {{ Skills }}"
           - "Printing map: {{ EXPERIENCE }}"
+          
