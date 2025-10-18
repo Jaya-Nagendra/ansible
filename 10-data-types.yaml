@@ -17,4 +17,4 @@
   tasks:  
   - name: print Variables
     ansible.builtin.debug:
-      -msg: "Age is: {{AGE}} & Name is: {{NAME}} & Learning message: {{isDevops}} & Printing list: {{Skills}} & Printing map: {{EXPERIENCE}}"
+      - msg: "Age is: {{AGE}} & Name is: {{NAME}} & Learning message: {{isDevops}} & Printing list: {{Skills}} & Printing map: {{EXPERIENCE}}"
