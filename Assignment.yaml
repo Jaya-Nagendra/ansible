@@ -7,7 +7,7 @@
 
   tasks:
   - name: check the user exist or not
-    ansible.become.command: id.{{USERNAME}}
+    ansible.builtin.command: id.{{USERNAME}}
     register: out
     ignore_errors: true
 
