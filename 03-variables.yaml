@@ -1,0 +1,14 @@
+- name: Variables
+  hosts: node
+  vars:
+    COURSE: Devops
+    DURATION: 4Months
+
+  tasks:
+    - name: print the content
+      ansible.builtin.debug:
+        msg: "Hello I am learning Ansible"
+
+    - name: Print with Variables
+      ansible.builtin.debug:
+        msg: "Hello I am learning {{COURSE}}, Duration {{DURATION}}"
