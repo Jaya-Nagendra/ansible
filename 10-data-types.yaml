@@ -1,0 +1,20 @@
+- name: ansible variable data types
+  hosts: localhost
+
+  vars:
+  - AGE: 30
+  - NAME: "Nagendra"  # string
+  - isDevops: true 
+  - Skills:   # List
+    - Devops
+    - AWS
+    - Docker
+
+  - EXPERIENCE:   # Map
+      Devops: 7
+      AWS: 2
+      Dccker: 3  
+  tasks:  
+  - name: print Variables
+    ansible.builtin.debug:
+      -msg: "Age is: {{AGE}} & Name is: {{NAME}} & Learning message: {{isDevops}} & Printing list: {{Skills}} & Printing map: {{EXPERIENCE}}"

@@ -26,3 +26,6 @@
 # Next play level
 # inventory
 # Roles
+
+
+# After start execution its will check all the mentioned variables. then it will print based on the precedence if any value missing from derived variables it will through error.
