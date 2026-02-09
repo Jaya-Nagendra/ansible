@@ -37,4 +37,4 @@
      NAME: "Nagendra"
      AGE: 25
     ansible.builtin.debug:
-     msg: "My name is {{ NAME }}, age {{ AGE }} - task level"
+     msg: "My name is {{ NAME }}, age {{ AGE }} - file level"
