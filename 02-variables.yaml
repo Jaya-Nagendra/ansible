@@ -42,22 +42,22 @@
 
 #4. pass variables as args 
 
-- name: variables from arguments
-  hosts: local
-  connection: local
-  vars_prompt:
-  - name: NAME
-    prompt: enter name
-    private: false
+# - name: variables from arguments
+#   hosts: local
+#   connection: local
+#   vars_prompt:
+#   - name: NAME
+#     prompt: enter name
+#     private: false
 
-  - name: AGE
-    prompt: enter age
-    private: true
+#   - name: AGE
+#     prompt: enter age
+#     private: true
 
-  tasks:
-  - name: varaibles from args
-    ansible.builtin.debug:
-     msg: "My name is {{ NAME }}, age {{ AGE }} - prompt args level"
+#   tasks:
+#   - name: varaibles from args
+#     ansible.builtin.debug:
+#      msg: "My name is {{ NAME }}, age {{ AGE }} - prompt args level"
 
 
 #5. pass variables from inventory file
