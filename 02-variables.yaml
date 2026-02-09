@@ -8,4 +8,4 @@
   tasks:
   - name: Variables form play level
     ansible.builtin.debug:
-    msg: "My name is {{ NAME }}, age {{ AGE }}"    
+     msg: "My name is {{ NAME }}, age {{ AGE }}"    
