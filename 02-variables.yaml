@@ -1,3 +1,5 @@
+
+#1.
 # - name: Variables in ply level
 #   hosts: local
 #   connection: local
@@ -8,16 +10,31 @@
 #   tasks:
 #   - name: Variables form play level
 #     ansible.builtin.debug:
-#      msg: "My name is {{ NAME }}, age {{ AGE }}"    
+#      msg: "My name is {{ NAME }}, age {{ AGE }} - play level"    
 
+#2.
+# - name: Variables in task level 
+#   hosts: local
+#   connection: local
+#   tasks:
+#   - name: variables at task level
+#     vars:
+#      NAME: "Nagendra"
+#      AGE: 25
+#     ansible.builtin.debug:
+#      msg: "My name is {{ NAME }}, age {{ AGE }} - task level"
 
-- name: Variables in task level 
+#3.
+
+- name: varaibles from var_files
   hosts: local
   connection: local
+  vars_files:
+  - details.yaml
   tasks:
-  - name: variables at task level
+  - name: variables From separate files
     vars:
      NAME: "Nagendra"
      AGE: 25
     ansible.builtin.debug:
-     msg: "My name is {{ NAME }}, age {{ AGE }}"
+     msg: "My name is {{ NAME }}, age {{ AGE }} - task level"
