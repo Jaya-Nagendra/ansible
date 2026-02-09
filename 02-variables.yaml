@@ -16,7 +16,8 @@
   connection: local
   tasks:
   - name: variables at task level
-    NAME: "Nagendra"
-    AGE: 25
+    vars:
+     NAME: "Nagendra"
+     AGE: 25
     ansible.builtin.debug:
      msg: "My name is {{ NAME }}, age {{ AGE }}"
