@@ -1,11 +1,11 @@
 - name: Variables in ansible
   hosts: local
-  conecction: local
+  connection: local
   vars:
-    NAMEs: "Nagendra"
+    NAME: "Nagendra"
     AGE: 25
 
   tasks:
   - name: Variables form play level
     ansible.builtin.debug:
-    msg: "My name is {{ NAMEs }}, age {{ AGE }}"    
+    msg: "My name is {{ NAME }}, age {{ AGE }}"    
