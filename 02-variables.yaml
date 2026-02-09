@@ -40,9 +40,9 @@
 #      msg: "My name is {{ NAME }}, age {{ AGE }} - file level"
 
 
-#4. pass variables as args 
+#4. pass variables as prompt 
 
-# - name: variables from arguments
+# - name: variables from prompts
 #   hosts: local
 #   connection: local
 #   vars_prompt:
@@ -57,15 +57,26 @@
 #   tasks:
 #   - name: varaibles from args
 #     ansible.builtin.debug:
-#      msg: "My name is {{ NAME }}, age {{ AGE }} - prompt args level"
+#      msg: "My name is {{ NAME }}, age {{ AGE }} - prompt level"
 
 
-#5. pass variables from inventory file
+#5. pass variables from inventory file in inventory.ini in this file provided the variables.
 
-- name: Variables from inventory file
+# - name: Variables from inventory file
+#   hosts: local
+#   connection: local
+#   tasks:
+#   - name: varaibles from inventory file
+#     ansible.builtin.debug:
+#      msg: "My name is {{ NAME }}, age {{ AGE }} - inventory file level"
+
+
+#6. varables from args directly 
+
+- name: Variables from args 
   hosts: local
   connection: local
   tasks:
-  - name: varaibles from inventory file
+  - name: varaibles from arguments
     ansible.builtin.debug:
      msg: "My name is {{ NAME }}, age {{ AGE }} - inventory file level"
