@@ -57,6 +57,15 @@
   tasks:
   - name: varaibles from args
     ansible.builtin.debug:
-     msg: "My name is {{ NAME }}, age {{ AGE }} - file level"
+     msg: "My name is {{ NAME }}, age {{ AGE }} - prompt args level"
 
 
+#5. pass variables from inventory file
+
+- name: Variables from inventory file
+  hosts: local
+  connection: local
+  tasks:
+  - name: varaibles from inventory file
+    ansible.builtin.debug:
+     msg: "My name is {{ NAME }}, age {{ AGE }} - inventory file level"
