@@ -26,15 +26,37 @@
 
 #3.
 
-- name: varaibles from var_files
+# - name: varaibles from var_files
+#   hosts: local
+#   connection: local
+#   vars_files:
+#   - details.yaml
+#   tasks:
+#   - name: variables From separate files
+#     vars:
+#      NAME: "Nagendra"
+#      AGE: 25
+#     ansible.builtin.debug:
+#      msg: "My name is {{ NAME }}, age {{ AGE }} - file level"
+
+
+#4. pass variables as args 
+
+- name: variables from arguments
   hosts: local
   connection: local
-  vars_files:
-  - details.yaml
+  vars_prompt:
+  - name: NAME
+    prompt: enter name
+    private: false
+
+  - name: AGE
+    prompt: enter age
+    private: true
+
   tasks:
-  - name: variables From separate files
-    vars:
-     NAME: "Nagendra"
-     AGE: 25
+  - name: varaibles from args
     ansible.builtin.debug:
      msg: "My name is {{ NAME }}, age {{ AGE }} - file level"
+
+
