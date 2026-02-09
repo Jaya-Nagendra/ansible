@@ -79,4 +79,6 @@
   tasks:
   - name: varaibles from arguments
     ansible.builtin.debug:
-     msg: "My name is {{ NAME }}, age {{ AGE }} - inventory file level"
+     msg: "My name is {{ NAME }}, age {{ AGE }} - variable arguments"
+
+     # ansible-playbook -i inventory.ini -e NAME=nagendra -e AGE=25 02-variables.yaml
