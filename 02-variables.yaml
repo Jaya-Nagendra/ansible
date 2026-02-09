@@ -1,11 +1,22 @@
-- name: Variables in ansible
+# - name: Variables in ply level
+#   hosts: local
+#   connection: local
+#   vars:
+#     NAME: "Nagendra"
+#     AGE: 25
+
+#   tasks:
+#   - name: Variables form play level
+#     ansible.builtin.debug:
+#      msg: "My name is {{ NAME }}, age {{ AGE }}"    
+
+
+- name: Variables in task level 
   hosts: local
   connection: local
-  vars:
+  tasks:
+  - name: variables at task level
     NAME: "Nagendra"
     AGE: 25
-
-  tasks:
-  - name: Variables form play level
     ansible.builtin.debug:
-     msg: "My name is {{ NAME }}, age {{ AGE }}"    
+     msg: "My name is {{ NAME }}, age {{ AGE }}"
