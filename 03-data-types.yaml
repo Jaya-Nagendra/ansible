@@ -5,11 +5,11 @@
    NAME: "Nagendra"
    AGE: 25
    ISMALE: yes
-   SKILLS:
+   SKILLS: # List starts with - or []
    - linux
    - shell
    - ansible
-   DETAILS:
+   DETAILS:  # map / dictionary starts with {}
     QUALIFICATION: "B.TECH"
     PASSOUTYEAR: 2021
 
