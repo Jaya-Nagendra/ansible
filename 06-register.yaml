@@ -3,9 +3,9 @@
   connection: local
   tasks:
   - name: know about register
-    ansible.builtin.shell: $PWD
-    register: pwd
+    ansible.builtin.shell: cat /etc/passwd | grep root
+    register: root_output
   
   - name: Print 
     ansible.builtin.debug:
-      msg: "{{ pwd }}"
+      msg: "{{ root_output }}"
