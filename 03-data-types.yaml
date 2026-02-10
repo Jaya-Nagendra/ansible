@@ -1,0 +1,25 @@
+- name: Data types
+  hosts: local
+  connection: local
+  vars:
+   NAME: "Nagendra"
+   AGE: 25
+   ISMALE: yes
+   SKILLS:
+   - linux
+   - shell
+   - ansible
+   DETAILS:
+    QUALIFICATION: "B.TECH"
+    PASSOUTYEAR: 2021
+
+  tasks:
+  - name: Print
+    ansible.builtin.debug:
+      msg: |
+       Name: {{ NAME }}
+       Age: {{ AGE }}
+       IsMale: {{ ISMALE }}
+       Skills: {{ SKILLS }}
+       Details: {{ DETAILS }}
+
