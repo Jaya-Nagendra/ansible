@@ -1,0 +1,11 @@
+- name: Store command output in variable
+  hosts: local
+  connection: local
+  tasks:
+  - name: know about register
+    ansible.builtin.shell: $PWD
+    register: pwd
+  
+  - name: Print 
+    ansible.builtin.debug:
+      msg: pwd
