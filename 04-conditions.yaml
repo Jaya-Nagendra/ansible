@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    NUMBER: 15
+    NUMBER: 9
 
   tasks:
   - name: Condition check
