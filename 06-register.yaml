@@ -1,4 +1,4 @@
-- name: Store command output in variable
+- name: Store command output in variable and using shell command
   hosts: local
   connection: local
   tasks:

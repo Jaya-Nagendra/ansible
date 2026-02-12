@@ -1,0 +1,22 @@
+- name: Ansible filters
+  hosts: local
+  connection: local
+  vars:
+    topics: linux, shell, ansible
+    tags_Map:
+      name: ansible
+      project: roboshop
+  tasks:
+  - name: greeting
+    ansible.builtin.debug:
+      msg: "Hi Nagendra {{ GEETING | default('Good Morning') }}" 
+
+  - name: convert string to list
+    ansible.builtin.debug:
+      msg: "{{ topics | split(,) }}"    # it will split based on the , symbol
+
+  - name: convert map to list
+    ansible.builtin.debug:
+      msg: "{{ tags_Map | dict2list }}"  
+      
+          

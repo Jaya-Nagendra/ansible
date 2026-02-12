@@ -1,0 +1,12 @@
+- name:
+  hosts: local
+  connection: local
+  become: yes   # providing root access
+  tasks:
+  - name: install packages
+    ansible.builtin.package:
+      name: "{{ item }}"
+      state: present
+    loop:
+    - nginx
+    - mysql
