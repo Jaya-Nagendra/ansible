@@ -5,6 +5,7 @@
   - name: check user exist or not 
     ansible.builtin.command: id roboshop
     register: user_output
+    ignore_errors: true  # by default ansible will exit if it founds any error for that avoiding purpose will use this.
 
   - name: print the output
     ansible.builtin.debug:
