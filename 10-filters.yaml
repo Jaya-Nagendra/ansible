@@ -13,7 +13,7 @@
 
   - name: convert string to list
     ansible.builtin.debug:
-      msg: "{{ topics | split(,) }}"    # it will split based on the , symbol
+      msg: "{{ topics | split(',') }}"    # it will split based on the , symbol
 
   - name: convert map to list
     ansible.builtin.debug:
